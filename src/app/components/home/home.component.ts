@@ -33,10 +33,6 @@ export class HomeComponent implements OnInit {
         console.log(gameList);
         for(var i = 0; i < this.games.length; ++i){
             console.log(this.games[i]);
-            for(var j = 0; j < this.games[i].parent_platforms.length; ++j){
-              console.log(this.games[i].parent_platforms[j].platform.name);
-
-            }
         }
 
       }
