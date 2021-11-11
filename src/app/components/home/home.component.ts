@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { APIResponse, Game } from 'src/app/models';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { APIResponse, Planet } from 'src/app/models';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -10,10 +10,11 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class HomeComponent implements OnInit {
   public sort: string | undefined;
-  public games: Array<Game> | undefined;
+  public planets: Array<Planet> | undefined;
 
   constructor(private httpService: HttpService,
-    private activatedRoute: ActivatedRoute) { }
+    private activatedRoute: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
@@ -28,15 +29,18 @@ export class HomeComponent implements OnInit {
   searchGames(sort: string, search?: string) {
 
     this.httpService
-      .getGameList(sort, search).subscribe((gameList: APIResponse<Game>) => {
-        this.games = gameList.results;
-        console.log(gameList);
-        for(var i = 0; i < this.games.length; ++i){
-            console.log(this.games[i]);
-        }
+      .getGameList(sort, search).subscribe((planetList: APIResponse<Planet>) => {
+        this.planets = planetList.results;
+        console.log(this.planets);
+        console.log(planetList);
+        // for(var i = 0; i < planetList.; i++){
+        //   console.log(planetList[i]);
+        // }
+        
+      });
+  }
 
-      }
-      );
-
+  openGameDetails(id: string): void {
+    this.router.navigate(['details', id]);
   }
 }

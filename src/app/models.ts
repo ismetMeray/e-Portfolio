@@ -1,17 +1,23 @@
-export interface Game {
-    background_image: string;
-    name: string;
-    released: string;
-    metacritic_url: string;
-    website: string;
-    description: string;
-    metacritic: number;
-    genres: Array<Genre>;
-    parent_platforms: Array<ParentPlatform>;
-    publishers: Array<Publishers>;
-    ratings: Array<Rating>;
-    screenshots: Array<Screenshots>;
-    trailers: Array<Trailer>;
+export interface Planet {
+    id: number,
+    letter: string,
+    pl_controvflag: number,
+    pl_orbper: number,
+    pl_orbsmax: number,
+    pl_orbeccen: number,
+    pl_orbincl: number,
+    pl_bmassj: number,
+    pl_rade: number,
+    pl_publ_date: string,
+    pl_pelink: string,
+    pl_locale: string,
+    pl_mnum: number,
+    pl_disc: string,
+    pl_bmasse: number,
+    statusId: number,
+    discoveryMethodId: number,
+    systemId: number,
+    telescopeId: number
   }
   
   export interface APIResponse<T> {
@@ -25,6 +31,7 @@ export interface Game {
   interface ParentPlatform {
     platform: {
       name: string;
+      slug: string
     };
   }
   
