@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { APIResponse, Planet } from 'src/app/models';
 import { HttpService } from 'src/app/services/http.service';
 
@@ -13,8 +13,7 @@ export class HomeComponent implements OnInit {
   public planets: Array<Planet> | undefined;
 
   constructor(private httpService: HttpService,
-    private activatedRoute: ActivatedRoute,
-    private router: Router) { }
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
@@ -29,18 +28,15 @@ export class HomeComponent implements OnInit {
   searchGames(sort: string, search?: string) {
 
     this.httpService
-      .getGameList(sort, search).subscribe((planetList: APIResponse<Planet>) => {
-        this.planets = planetList.results;
-        console.log(this.planets);
-        console.log(planetList);
-        // for(var i = 0; i < planetList.; i++){
-        //   console.log(planetList[i]);
-        // }
-        
-      });
-  }
+      .getGameList(sort, search).subscribe((gameList: APIResponse<Planet>) => {
+        this.planets = gameList.results;
+        console.log(gameList);
+        for(var i = 0; i < this.planets.length; ++i){
+            // console.log(this.games[i].);
+        }
 
-  openGameDetails(id: string): void {
-    this.router.navigate(['details', id]);
+      }
+      );
+
   }
 }

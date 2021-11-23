@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  angular:
+    depends_on:
+      - app
+    build: .
+    restart: unless-stopped
+    ports:
+      - 9000:90
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+      - node_modules:/home/node/app/node_modules
+    networks:
+      - angularnet
+
+volumes:
+  node_modules:
+
+networks:
+  angularnet:
+    name: nodeapi-planets
