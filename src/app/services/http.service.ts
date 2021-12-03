@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { forkJoin, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment as env } from 'src/environments/environment';
-import { APIResponse, Planet } from '../models';
+import { APIResponse, StarSystem, Planet } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,22 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  getGameList(
+  getStarSystemIndex(
+    ordering: string,
+    search?: string
+  ): Observable<APIResponse<StarSystem>> {
+    let params = new HttpParams().set('ordering', ordering);
+
+    if (search) {
+      params = new HttpParams().set('ordering', ordering).set('search', search);
+    }
+
+    return this.http.get<APIResponse<StarSystem>>(`${env.BASE_URL}/api/starsystem/index/59/1`, {
+      params: params,
+    });
+  }
+
+  getAllPlanets(
     ordering: string,
     search?: string
   ): Observable<APIResponse<Planet>> {
@@ -22,12 +37,12 @@ export class HttpService {
       params = new HttpParams().set('ordering', ordering).set('search', search);
     }
 
-    return this.http.get<APIResponse<Planet>>(`${env.BASE_URL}/api/exoplanet`, {
+    return this.http.get<APIResponse<Planet>>(`${env.BASE_URL}/api/exoplanet/20/1`, {
       params: params,
     });
   }
 
-  // getGameDetails(id: string): Observable<Planet> {
+  // getGameDetails(id: string): Observable<StarSystem> {
   //   const gameInfoRequest = this.http.get(`${env.BASE_URL}/games/${id}`);
   //   const gameTrailersRequest = this.http.get(
   //     `${env.BASE_URL}/games/${id}/movies`

@@ -1,98 +1,148 @@
-.filters {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding-left: 20px;
+/*	Reset & General
+---------------------------------------------------------------------- */
+* { margin: 0px; padding: 0px; }
+
+.it-tile{
+	width: 100%;
+	background:#fff;
+	border-radius:5px;
+	box-shadow:0px 2px 3px -1px rgba(151, 171, 187, 0.7);
+	float:left;
+  	transform-style: preserve-3d;
+  	margin: 10px 5px;
+
 }
 
-::ng-deep {
-    .mat-form-field-infix {
-        background-color: #3f51b5;
-    }
-
-    .mat-select-value,
-    .mat-select-arrow,
-    .mat-form-field-hide-placeholder .mat-select-placeholder,
-    .mat-form-field-appearance-legacy .mat-form-field-label {
-        color: #fff !important;
-        opacity: 1;
-    }
-
-    .mat-form-field-infix {
-        border-color: #fff;
-        border-top: none;
-        padding-left: 5px !important;
-    }
-
-    .mat-form-field-appearance-legacy .mat-form-field-underline {
-        background-color: #fff !important;
-    }
+.it-header{
+	border-bottom:1px solid #ebeff2;
+	padding:19px 0;
+	text-align:center;
+	color:#59687f;
+	font-size:600;
+	font-size:19px;	
+	position:relative;
 }
 
-.games {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 20px auto;
+.it-banner-img {
+	padding: 5px 5px 0;
 }
 
-.game {
-    width: 280px;
-    margin: 10px;
-    height: 330px;
-    overflow: hidden;
-    border-radius: 5px;
-    background-color: #202020;
-    box-shadow: 4px 3px 8px 0px rgb(200 152 44 / 22%);
-    transition-duration: 0.3s;
-    cursor: pointer;
+.it-banner-img img {
+	width: 100%;
+	border-radius: 5px;
+}
 
-    &:hover {
-        box-shadow: 4px 3px 11px 6px rgb(200 152 44 / 46%);
-        transform: translateY(-3px);
-    }
+.it-dates{
+	border:1px solid #ebeff2;
+	border-radius:5px;
+	padding:20px 0px;
+	margin:10px 20px;
+	font-size:16px;
+	color:#5aadef;
+	font-weight:600;	
+	overflow:auto;
+}
+.it-dates div{
+	float:left;
+	width:50%;
+	text-align:center;
+	position:relative;
+}
+.it-dates strong,
+.stats strong{
+	display:block;
+	color:#adb8c2;
+	font-size:11px;
+	font-weight:700;
+}
+.it-dates span{
+	width:1px;
+	height:40px;
+	position:absolute;
+	right:0;
+	top:0;	
+	background:#ebeff2;
+}
+.it-stats{
+	border-top:1px solid #ebeff2;
+	background:#f7f8fa;
+	overflow:auto;
+	padding:15px 0;
+	font-size:16px;
+	color:#59687f;
+	font-weight:600;
+	border-radius: 0 0 5px 5px;
+}
+.it-stats div{
+	border-right:1px solid #ebeff2;
+	width: 33.33333%;
+	float:left;
+	text-align:center
+}
 
-    &-thumb-container {
-        background-color: #000;
-        position: relative;
-        height: 172px;
-        color: #fff;
-        text-align: center;
-    }
+.it-stats div:nth-of-type(3){border:none;}
 
-    &-thumbnail {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        height: 172px;
-    }
+div.footer {
+	text-align: right;
+	position: relative;
+	margin: 20px 5px;
+}
 
-    &-description {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        height: 157px;
-    }
+div.footer a.Cbtn{
+	padding: 10px 25px;
+	background-color: #DADADA;
+	color: #666;
+	margin: 10px 2px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 3px;
+}
 
-    &-name {
-        color: #fff;
-        font-weight: 700;
-        font-size: 22px;
-        margin-bottom: 20px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
+div.footer a.Cbtn-primary{
+	background-color: #5AADF2;
+	color: #FFF;
+}
 
-    &-platforms {
-        display: flex;
-    }
+div.footer a.Cbtn-primary:hover{
+	background-color: #7dbef5;
+}
 
-    &-platform {
-        width: 20px;
-        margin-right: 10px;
-    }
+div.footer a.Cbtn-danger{
+	background-color: #fc5a5a;
+	color: #FFF;
+}
+
+div.footer a.Cbtn-danger:hover{
+	background-color: #fd7676;
+}
+
+.example-card {
+    max-width: 400px;
+}
+.header{
+    margin: 20px;
+}
+
+.padding{
+    padding: 10px;
+}
+
+.example-header-image {
+    background-image: url("../../../assets/images/planets/3.jpg");
+    background-size: cover;
+}
+
+.card-style {
+    padding-right: 50px;
+}
+
+.resize {
+    width: 400px;
+    height: auto;
+}
+
+.resize {
+    width: 285px;
+    height: auto;
 }

@@ -1,16 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchbarComponent } from './searchbar.component';
+import { SidebariconComponent } from '../sidebaricon/sidebaricon.component';
 
 describe('SearchbarComponent', () => {
   let component: SearchbarComponent;
+  let sidebarIcon : SidebariconComponent;
   let fixture: ComponentFixture<SearchbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchbarComponent ]
+      declarations: [SearchbarComponent, SidebariconComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

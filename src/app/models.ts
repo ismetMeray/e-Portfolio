@@ -17,8 +17,29 @@ export interface Planet {
     statusId: number,
     discoveryMethodId: number,
     systemId: number,
-    telescopeId: number
+    telescopeId: number,
+    createdAt: string,
+    updatedAt: string,
   }
+
+export interface StarSystem{
+  id: number,
+  Name: string,
+  st_dist: number,
+  st_teff: number,
+  st_mass: number,
+  st_rad: number,
+  st_age: number,
+  st_vsini: number,
+  ra: number,
+  dec: number,
+  createdAt: string,
+  updatedAt: string,
+
+  exoplanets: Array<Planet>,
+
+}
+
   
   export interface APIResponse<T> {
       results: Array<T>;

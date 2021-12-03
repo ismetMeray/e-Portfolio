@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { APIResponse, Planet } from 'src/app/models';
+import { APIResponse, StarSystem } from 'src/app/models';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-starsystemindex',
+  templateUrl: './starsystemindex.component.html',
+  styleUrls: ['./starsystemindex.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class StarsystemindexComponent implements OnInit {
   public sort: string | undefined;
-  public planets: Array<Planet> | undefined;
+  public starsystems: Array<StarSystem> | undefined;
 
   constructor(private httpService: HttpService,
     private activatedRoute: ActivatedRoute) { }
@@ -18,22 +18,23 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
       if (params['game-search']) {
-        this.getPlanetIndex('metacrit', params['search-games']);
+        this.searchSystemsIndex('metacrit', params['search-games']);
       } else {
-        this.getPlanetIndex('metacrit');
+        this.searchSystemsIndex('metacrit');
       }
     });
   }
-
-  getPlanetIndex(sort: string, search?: string) {
+  
+  searchSystemsIndex(sort: string, search?: string) {
 
     this.httpService
-      .getAllPlanets(sort, search).subscribe((gameList: APIResponse<Planet>) => {
-        this.planets = gameList.results;
+      .getStarSystemIndex(sort, search).subscribe((gameList: APIResponse<StarSystem>) => {
+        this.starsystems = gameList.results;
         console.log(gameList);
       });
   }
 
+  
   getRandomInt() {
     return Math.round(Math.random() * (15 - 1) + 1);
 

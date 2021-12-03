@@ -1,0 +1,27 @@
+<div layout="column" class="zero" *ngFor="let system of starsystems">
+
+    <div class="container" style="background-color: black;">
+      <div style="color: wheat;">
+        <h1>{{system.Name}}</h1>
+      </div>
+      <div class="row">
+        <div class="col-3" *ngFor="let planet of system.exoplanets">
+          <div class="card padding" style="width: 19rem; background-color: black;">
+            <img class="card-img-top" src="../../../assets/images/planets/{{getRandomInt()}}.jpg" alt="Planet image">
+            <div class="card-body" style="background-color: white;">
+              <div class="row">
+                <div class="col">
+                  <p><span style="color: purple;">pl orbper: </span>{{planet.pl_orbper}}</p>
+                </div>
+                <div class="col">
+                  <p><span style="color: purple;">pl bmassj: </span>{{planet.pl_bmassj}}</p>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -16,13 +16,21 @@ import { HomeComponent } from './components/home/home.component'
 import { HttpHeadersInterceptor } from './interceptors/htpp-params.interceptor';
 import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
 import { DetailsComponent } from './components/details/details.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { StarsystemindexComponent } from './components/starsystemindex/starsystemindex.component';
+import { SidebariconComponent } from './components/sidebaricon/sidebaricon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SidebariconComponent,
     SearchbarComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    StarsystemindexComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -34,7 +42,10 @@ import { DetailsComponent } from './components/details/details.component';
     MatTabsModule,
     MatIconModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [
     {

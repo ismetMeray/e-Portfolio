@@ -1,58 +1,65 @@
-.search {
-    &-container {
-      width: 100%;
-      height: 60px;
-      background-color: #323a45;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 4;
-    }
-  
-    &-form {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-  
-    &-input {
-      margin-left: 10px;
-      padding: 10px;
-      width: 1000px;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      outline: none;
-      border: none;
-    }
-  
-    &-button {
-      border: none;
-      outline: none;
-      background: #3f51b5;
-      padding: 10px;
-      border-left: 1px solid rgba(0, 0, 0, 0.3);
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      color: #fff;
-      font-weight: 700;
-      transition-duration: 0.3s;
-      cursor: pointer;
-  
-      &:hover {
-        color: #3f51b5;
-        background-color: #fff;
-        border: 1px solid #3f51b5;
-      }
-    }
-  }
-  
-  .logo {
-    margin-left: 10px;
-    color: #fff;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
-  }
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.banner {
+  @apply bg-blue-500 dark:bg-blue-900 dark:text-blue-200 p-10 text-center text-lg;
+}
+.searchbar {
+  @apply fixed top-0 left-0 h-screen w-96 m-0
+            flex flex-col
+            bg-dark-blue-800 text-white shadow-lg;
+}
+
+// body {
+//   background-color: #616161
+// }
+
+// .bg-black {
+//   background-color: #000
+// }
+
+// .navbar-brand {
+//   padding: 11px 20px
+// }
+
+// .active {
+//   background-color: #fff;
+//   color: #000 !important
+// }
+
+// .navbar-nav {
+//   width: 100%
+// }
+
+// .nav-link {
+//   color: inherit !important
+// }
+
+// .nav-item {
+//   padding: 6px 20px;
+//   color: #fff
+// }
+
+// .nav-item:hover {
+//   background-color: #fff;
+//   color: #000 !important
+// }
+
+// .right {
+//   margin-left: auto
+// }
+
+// .navbar-collapse.collapse.in {
+//   display: block !important
+// }
+
+// @media (max-width: 992px) {
+//   .right {
+//       margin-left: 0
+//   }
+
+//   .nav-item {
+//       width: 100%
+//   }
+// }

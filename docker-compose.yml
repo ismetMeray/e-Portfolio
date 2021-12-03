@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     ports:
       - 9000:90
-    working_dir: /home/node/app
+    working_dir: /usr/src/app
     volumes:
       - ./:/home/node/app
       - node_modules:/home/node/app/node_modules
