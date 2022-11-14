@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "portfolioim-4167e"
+  },
+  "targets": {
+    "portfolioim-4167e": {
+      "hosting": {
+        "portfolio": [
+          "portfolioim-4167e"
+        ]
+      }
+    }
+  }
+}

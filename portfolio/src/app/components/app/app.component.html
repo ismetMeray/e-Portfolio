@@ -24,7 +24,7 @@
     </div>
 </nav>
 
-<div class="container-fluid" style="background-color:rgb(231, 47, 47)">
+<div class="container-fluid intro-section">
     <div class="row justify-content">
         <div class="col-4 p-3">
             <div class="text-center text-black mb-3 border-0">
@@ -40,9 +40,9 @@
                 <div class="col-2">
                     <div class="content-wrapperfa-icon-custom">
                         <a>
-                            <span style="font-size: 1em;">
+                            <span style="font-size: 4vw;">
                                 <a style="color:black;" href="https://www.linkedin.com/in/ismetmeray/"
-                                    target="_blank"><i class="fa-brands fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                                    target="_blank"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
                             </span>
                         </a>
                     </div>
@@ -51,9 +51,9 @@
                 <div class="col-2">
                     <div class="content-wrapper fa-icon-custom">
                         <a>
-                            <span style="font-size: 1em;">
+                            <span style="font-size: 4vw;">
                                 <a style="color:black;" href="https://github.com/ismetMeray" target="_blank"><i
-                                        class="fa-brands fa-github fa-3x " aria-hidden="true"></i></a>
+                                        class="fa-brands fa-github" aria-hidden="true"></i></a>
                             </span>
                         </a>
                     </div>
@@ -62,9 +62,9 @@
                 <div class="col-2">
                     <div class="content-wrapper fa-icon-custom">
                         <a>
-                            <span style="font-size: 1em; color: black;">
+                            <span style="font-size: 4vw; color: black;">
                                 <a style="color:black;" href="ismet-meray@hotmail.com" target="_blank"><i
-                                        class="fa-solid fa-envelope fa-3x"></i></a>
+                                        class="fa-solid fa-envelope"></i></a>
                             </span>
                         </a>
                     </div>
@@ -87,8 +87,6 @@
                     </div>
                 </div>
             </section>
-
-
 
             <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -120,45 +118,41 @@
                             <div class="section-inner shadow-sm rounded">
                                 <div class="content">
                                     <div *ngIf="repo.isCurrentProject; else elseContent">
-                                        <div class="item featured text-center">
-                                            <h2 class="heading">{{'PROJECT.TITLE' | translate}}</h2>
-                                            <h3 class="title mb-3"><a>For The Future | Fitness</a></h3>
-                                            <div class="desc text-start">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div class="featured-image">
-                                                            <img class="img-fluid project-image rounded shadow-sm"
-                                                                src='{{ "../assets/images/" + repo.name + ".jpeg" }}'
-                                                                alt="project name">
+                                        <div class="desc">
+                                            <div class="item row">
+                                                <div class="col-md-4">
+                                                    <a target="_blank">
+                                                        <img class="img-fluid project-image rounded shadow-sm"
+                                                            src='{{ "../assets/images/" + repo.name + ".jpeg" }}'
+                                                            alt="project name">
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <h3 class="title">{{repo.name | translate}}</h3>
+
+                                                    <ul class="list-unstyled">
+                                                        <li class="list-group-item">{{'PROJECT.PHASE1' | translate}}
+                                                        </li>
+                                                        <li class="list-group-item">{{'PROJECT.PHASE2' | translate}}
+                                                        </li>
+                                                        <li class="list-group-item">{{'PROJECT.PHASE3' | translate}}
+                                                        </li>
+                                                    </ul>
+                                                    <p><a class="more-link" href="{{repo.html_url}}"><i
+                                                                class="fas fa-external-link-alt"></i>
+                                                            {{'FINDOUTMORE' | translate}}</a></p>
+                                                </div>
+                                                <div class="col">
+                                                    <h2>TechStack</h2>
+                                                    <ul class="list-group">
+                                                        <div *ngFor="let tech of repo.techStack">
+                                                            <li class="list-group-item">{{tech}}</li>
                                                         </div>
-                                                    </div>
-
-                                                    <div class="col-5">
-                                                        <h2>Planning</h2>
-
-                                                        <ul class="list-unstyled">
-                                                            <li class="list-group-item">{{'PROJECT.PHASE1' | translate}}
-                                                            </li>
-                                                            <li class="list-group-item">{{'PROJECT.PHASE2' | translate}}
-                                                            </li>
-                                                            <li class="list-group-item">{{'PROJECT.PHASE3' | translate}}
-                                                            </li>
-                                                        </ul>
-                                                        <p><br><a class="more-link"><i
-                                                                    class="fas fa-external-link-alt"></i>
-                                                                {{'FINDOUTMORE' | translate}}</a></p>
-                                                    </div>
-
-                                                    <div class="col">
-                                                        <h2>TechStack</h2>
-                                                        <ul class="list-group">
-                                                            <div *ngFor="let tech of repo.techStack">
-                                                                <li class="list-group-item">{{tech}}</li>
-                                                            </div>
-                                                        </ul>
-                                                    </div>
+                                                    </ul>
                                                 </div>
                                             </div>
+
+                                            <hr class="divider">
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +180,8 @@
                                                 <li class="list-group-item"> {{'PROJECT' + i + '.DESC3' | translate}}
                                                 </li>
                                             </ul>
-                                            <p><a class="more-link" href="{{repo.html_url}}"><i class="fas fa-external-link-alt"></i>
+                                            <p><a class="more-link" href="{{repo.html_url}}"><i
+                                                        class="fas fa-external-link-alt"></i>
                                                     {{'FINDOUTMORE' | translate}}</a></p>
                                         </div>
                                         <div class="col">
@@ -208,8 +203,6 @@
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
             </div>
-
-
         </div>
 
         <div class="secondary col-lg-4 col-12">
@@ -490,122 +483,32 @@
     </div>
 </div>
 
-
-
-
-
-
-<!-- <h1>Mijn Projecten</h1>
-<div class="row text-black">
-    <div *ngFor="let repo of repos">
-        <div class="col-l">
-            <div class="card border-0 w-100">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h1 class="card-title">{{repo.name}}</h1>
-                            <a class="img-fluid">
-                                <img src='{{ "../assets/images/" + repo.name + ".jpeg" }}' class="img-thumbnail"
-                                    alt="thumbnail">
-                            </a>
-                        </div>
-                        <div class="col-sm-2">
-                            <h2>TechStack</h2>
-                            <ul class="list-group">
-                                <div *ngFor="let tech of repo.techStack">
-                                    <li class="list-group-item">{{tech}}</li>
-                                    <!-- <span class="badge">{{tech}}</span>
-                                <p class="card-text">
-                                    
-                                </p> -->
-<!--</div>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col">
+                <section class="mb-4">
+                    <p>
+                        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                            data-mdb-ripple-color="dark">Contact me?</a>
+                        <br>
+                        <a class="text-dark m-1" role="button">
+                            Send me and email of add me on LinkedIn and i will return a message ASAP</a>
+                    </p>
+                </section>
+            </div>
+            <div class="col">
+                <section class="mb-4">
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                </section>
             </div>
         </div>
-
     </div>
-</div> -->
-<!-- <mat-toolbar class="toolbar" color="primary">
-
-    <mat-toolbar-row>
-        <span>Portfolio Ismet Meray</span>
-        <span class="example-spacer"></span>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <mat-icon>menu</mat-icon>
-        </button>
-    </mat-toolbar-row>
-</mat-toolbar>
-
-
-<mat-grid-list class="content" cols="1" rowHeight="3:1">
-    <mat-grid-tile>
-        <div class="intro-section">
-            <h1 class="intro-title">Ismet Meray</h1>
-
-            <sub>Software Engineer</sub>
-
-            <div class="image-container">
-                <img mat-card-image class="main-image" src="../assets/images/pf.jpg" alt="Photo of a Shiba Inu">
-            </div>
-
-            <div class="container icon-container" style="width: 25%">
-                <div class="row">
-                    <div class="col">
-                        <div class="content-wrapper fa-icon-custom">
-                            <a>
-                                <span style="font-size: 1em; color: grey;">
-                                    <i class="fa-brands fa-github fa-3x " aria-hidden="true"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="content-wrapper fa-icon-custom">
-                            <a>
-                                <span style="font-size: 1em; color: grey;">
-                                    <i class="fa-brands fa-linkedin fa-3x" aria-hidden="true"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="content-wrapper fa-icon-custom">
-                            <a> <span style="font-size: 1em; color: grey;">
-                                    <i class="fa-solid fa-envelope fa-3x"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </mat-grid-tile>
-
-    <mat-grid-tile>
-        <div class="container">
-            <div class="my-experience"> 
-                <h1 class="intro-title">Mijn ervaringen</h1>
-            </div>
-                <div *ngFor="let repo of repos">
-                        <mat-card class="example-card">
-                            <mat-card-title-group>
-                              <mat-card-title>{{repo.name}}</mat-card-title>
-                              <mat-card-subtitle>Medium</mat-card-subtitle>
-                            </mat-card-title-group>
-                            <mat-card-content>
-                                <img mat-card-md-image src='{{ "../assets/images/" + repo.name + ".jpeg" }}'>
-
-                            </mat-card-content>
-                          </mat-card>
-                </div>
-        </div>
-    </mat-grid-tile>
-</mat-grid-list>
-
-<router-outlet></router-outlet>
-<app-footer></app-footer> -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        2022:
+        <a class="text-dark" href="https://portfolioim.net">Portfolio Ismet Meray</a>
+    </div>
+</footer>

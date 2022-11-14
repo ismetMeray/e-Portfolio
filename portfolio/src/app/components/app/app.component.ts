@@ -45,13 +45,13 @@ export class AppComponent {
 
     //Fitness-App-IOS
     let techStackAPI = ["Swift", "SwiftUI", "Javascript", "Express", "MySQL", "XCode"]
-    this.repos.push(this.repositoryFactory.createRepository(0, "Fitness-App-IOS", true, true, 1, "www", "mooie app toch", techStackAPI));
+    this.repos.push(this.repositoryFactory.createRepository(0, "Fitness-App-IOS", true, true, 1, "https://github.com/ismetMeray/Fitness-App-IOS", "mooie app toch", techStackAPI));
 
     let techStackEverywhere = ["Java Android", "Javascript", "Express", "MySQL", "CI/CD", "Angular", "Mongoose", "Visual code"]
-    this.repos.push(this.repositoryFactory.createRepository(1, "Project-Everyware-blok11-Groep-B", true, false, 1, "www", "mooie app toch", techStackEverywhere));
+    this.repos.push(this.repositoryFactory.createRepository(1, "Project-Everyware-blok11-Groep-B", true, false, 1, "https://github.com/ismetMeray/Project-Everyware-blok11-Groep-B", "mooie app toch", techStackEverywhere));
 
-    let techStackMyDentity = ["PHP", "Javascript", "CodeIgniter", "Cassandra"]
-    this.repos.push(this.repositoryFactory.createRepository(2, "MyDentity", true, false, 1, "www", "mooie app toch", techStackMyDentity));
+    let techStackMyDentity = ["PHP", "Javascript", "CodeIgniter", "Cassandra", "ChartJS"]
+    this.repos.push(this.repositoryFactory.createRepository(2, "MyDentity", true, false, 1, "https://mydentity.com/", "mooie app toch", techStackMyDentity));
     console.log(this.repos)
   }
 

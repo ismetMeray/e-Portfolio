@@ -1,104 +1,24 @@
-// .example-spacer {
-//     flex: 1 1 auto;
-// }
-
-// .toolbar {
-//     width: 100%;
-//     position: fixed;
-//     top: 0
-// }
-
-// .content {
-//     width: 100%;
-//     margin-top: -1%;
-//     z-index: -1;
-// }
-
-// .special-card {
-//     /* create a custom class so you 
-//        do not run into specificity issues 
-//        against bootstraps styles
-//        which tends to work better than using !important 
-//        (future you will thank you later)*/
-
-//     background-color: rgba(245, 245, 245, 1);
-//     opacity: .4;
-// }
-
 .fa-icon-custom {
-    padding-bottom: 20%;
+  padding-bottom: 20%;
 }
-
-// .icon-container {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-
-// .image-container {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     margin-top: 3%;
-// }
 
 .main-image {
-    border-radius: 40%;
-    max-width: 50%;
-    min-height: 50%;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  padding-top: 4vw;
+
 }
-
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// sub {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-
-// .intro-title {
-//     padding-top: 2%;
-// }
-
-// .tile-image {
-//     width: 100%;
-//     height: auto;
-// }
 
 .intro-section {
-    color: white;
-    // background-image: url("../assets/images/mountain.webp");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+  background-image: url("../../../assets/images/abstract-banner.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
 }
 
-// .name-title {
-//     font-size: 55px;
-// }
-
-// .profile-row {
-//     margin-top: auto;
-//     margin-bottom: auto;
-// }
-
-// .my-experience {
-//     margin-top: 2%;
-// }
-
-/*!   
- * Template Name: Developer - Portfolio Landing Page Bootstrap 5 Template for Developers
- * Version: Bootstrap 5 v2.0
- * Author: Xiaoying Riley
- * Twitter: @3rdwave_themes
- * Copyright: 3rd Wave Media Ltd.
- * Website: https://themes.3rdwavemedia.com/
-*/
 body {
   font-family: 'Lato', arial, sans-serif;
   color: #434343;
@@ -108,14 +28,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #778492;
 }
 
 a {
-  color: #3AAA64;
+  color: #000000;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -125,14 +50,15 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: #2d844e;
+  color: #4c0404;
 }
 
 a:focus {
   text-decoration: none;
 }
 
-.btn, a.btn {
+.btn,
+a.btn {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -142,22 +68,26 @@ a:focus {
   font-weight: bold;
 }
 
-.btn .svg-inline--fa, a.btn .svg-inline--fa {
+.btn .svg-inline--fa,
+a.btn .svg-inline--fa {
   margin-right: 5px;
   position: relative;
   top: -2px;
 }
 
-.btn:hover, a.btn:hover {
+.btn:hover,
+a.btn:hover {
   text-decoration: none;
 }
 
-.btn:focus, a.btn:focus {
+.btn:focus,
+a.btn:focus {
   color: #fff;
   box-shadow: none;
 }
 
-a.btn-cta-primary, .btn-cta-primary {
+a.btn-cta-primary,
+.btn-cta-primary {
   background: #54ba4e;
   border: 1px solid #54ba4e;
   color: #fff;
@@ -165,13 +95,15 @@ a.btn-cta-primary, .btn-cta-primary {
   text-transform: uppercase;
 }
 
-a.btn-cta-primary:hover, .btn-cta-primary:hover {
+a.btn-cta-primary:hover,
+.btn-cta-primary:hover {
   background: #49ac43;
   border: 1px solid #49ac43;
   color: #fff;
 }
 
-a.btn-cta-secondary, .btn-cta-secondary {
+a.btn-cta-secondary,
+.btn-cta-secondary {
   background: #479FC8;
   border: 1px solid #479FC8;
   color: #fff;
@@ -179,7 +111,10 @@ a.btn-cta-secondary, .btn-cta-secondary {
   text-transform: uppercase;
 }
 
-a.btn-cta-secondary:hover, a.btn-cta-secondary:not(:disabled):not(.disabled):active:focus, .btn-cta-secondary:hover, .btn-cta-secondary:not(:disabled):not(.disabled):active:focus {
+a.btn-cta-secondary:hover,
+a.btn-cta-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-cta-secondary:hover,
+.btn-cta-secondary:not(:disabled):not(.disabled):active:focus {
   background: #3893bd;
   border: 1px solid #3893bd;
   color: #fff;
@@ -281,10 +216,10 @@ a.dotted-link:hover {
 }
 
 .list-group-item {
-    float: left;
-    border: 0 !important;
-    margin: 0px;
-    padding: 10px 0px;
+  float: left;
+  border: 0 !important;
+  margin: 0px;
+  padding: 10px 0px;
 }
 
 .section .content .more-link .svg-inline--fa {
@@ -389,7 +324,8 @@ a.dotted-link:hover {
   -o-transform: rotate(45deg) translate3d(0, 0, 0);
 }
 
-.latest .has-ribbon .ribbon .text:before, .latest .has-ribbon .ribbon .text:after {
+.latest .has-ribbon .ribbon .text:before,
+.latest .has-ribbon .ribbon .text:after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -815,11 +751,15 @@ body[data-theme="dark"] .testimonials .item .quote {
   color: rgba(255, 255, 255, 0.9);
 }
 
-body[data-theme="dark"] .latest .item .title a, body[data-theme="dark"] .projects .item .title a, body[data-theme="dark"] .blog .item .title a {
+body[data-theme="dark"] .latest .item .title a,
+body[data-theme="dark"] .projects .item .title a,
+body[data-theme="dark"] .blog .item .title a {
   color: rgba(255, 255, 255, 0.9);
 }
 
-body[data-theme="dark"] .latest .item .title a:hover, body[data-theme="dark"] .projects .item .title a:hover, body[data-theme="dark"] .blog .item .title a:hover {
+body[data-theme="dark"] .latest .item .title a:hover,
+body[data-theme="dark"] .projects .item .title a:hover,
+body[data-theme="dark"] .blog .item .title a:hover {
   color: #fff;
 }
 
@@ -835,7 +775,8 @@ body[data-theme="dark"] .languages .item .title {
   color: rgba(255, 255, 255, 0.9);
 }
 
-body[data-theme="dark"] .list ul li a, body[data-theme="dark"] .credits ul li a {
+body[data-theme="dark"] .list ul li a,
+body[data-theme="dark"] .credits ul li a {
   color: inherit;
 }
 
@@ -851,7 +792,9 @@ body[data-theme="dark"] .aside .subheading {
   color: rgba(255, 255, 255, 0.9);
 }
 
-body[data-theme="dark"] .gha-header, body[data-theme="dark"] .gha-footer, body[data-theme="dark"] .gha-feed {
+body[data-theme="dark"] .gha-header,
+body[data-theme="dark"] .gha-footer,
+body[data-theme="dark"] .gha-feed {
   background: #17191c;
   border-color: rgba(255, 255, 255, 0.1);
   color: #3AAA64;
@@ -861,9 +804,9 @@ body[data-theme="dark"] .gha-feed a {
   color: #3AAA64;
 }
 
-body[data-theme="dark"] .gha-header > .gha-github-icon,
-body[data-theme="dark"] .gha-header > .gha-user-info > a,
-body[data-theme="dark"] .gha-header > .gha-user-info > p > a {
+body[data-theme="dark"] .gha-header>.gha-github-icon,
+body[data-theme="dark"] .gha-header>.gha-user-info>a,
+body[data-theme="dark"] .gha-header>.gha-user-info>p>a {
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -892,7 +835,8 @@ body[data-theme="dark"] .contrib-number {
   color: rgba(255, 255, 255, 0.9);
 }
 
-body[data-theme="dark"] .border, body[data-theme="dark"] .contrib-column {
+body[data-theme="dark"] .border,
+body[data-theme="dark"] .contrib-column {
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -904,18 +848,22 @@ body[data-theme="dark"] .text-muted {
   .header {
     text-align: center;
   }
+
   .header .profile-image {
     float: none !important;
     margin: 0 auto;
   }
+
   .header .profile-content {
     float: none !important;
     text-align: center;
   }
+
   .header .btn {
     margin-top: 30px;
     float: none !important;
   }
+
   .project-image {
     margin-bottom: 15px;
   }
@@ -927,4 +875,3 @@ body[data-theme="dark"] .text-muted {
     max-width: inherit;
   }
 }
-

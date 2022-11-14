@@ -4,7 +4,7 @@
         "LINE2": "Mijn naam is Ismet Meray 22 jaar jong. Ik volg de opleiding Informatica op Avans in Den Bosch. Mijn interesses liggen bij het ontwerpen en ontwikkelen van web-applicaties en mobiele apps. Naast het ontwikkelen van software geniet ik er enorm van om mijn creativiteit los te laten gaan door muziek te produceren, tattoos te ontwerpen of (sinds kort) te schilderen. Ook deel ik mijn tijd graag met vrienden en familie!"
     },
     "PROJECT": {
-        "TITLE": "Projecten",
+        "TITLE": "Projects",
         "PHASE1": "Fase 1(huidige fase): Het bijhouden en inzien van jouw vooruitgang van de verschillende oefeningen",
         "PHASE2": "Fase 2: Mindfullness training met verschillende oefeningen",
         "PHASE3": "Fase 3: Bijhouden van calorie en macrovoedingstoffen"
@@ -55,9 +55,9 @@
     "LANGUAGES": {
         "LANGUAGE": "Talen",
         "DUTCH": "Nederlands",
-        "FIRST": "Moedertaal",
+        "FIRST": "Eerste taal",
     
-        "ENGLISH": "ENGLISH",
+        "ENGLISH": "ENGELS",
         "SECOND": "Tweede taal"
       },
     "CODINGMUSIC": {

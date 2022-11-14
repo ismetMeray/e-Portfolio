@@ -4,7 +4,7 @@
     "LINE2": "My name is Ismet Meray and I am 22 years young. At the moment I major in Computer Science at Avans university of applied sciences located in Den Bosch, The Netherlands. Currently my interests are in developing mobile apps or web-applications. besides developing software I also enjoy unleashing my creativity by producing or mixing music, designing and poking tattoos and of course spending time with friends and family "
   },
   "PROJECT": {
-    "TITLE": "Latest Project",
+    "TITLE": "Latest Projects",
     "PHASE1": "Phase 1(current phase): Keeping track of and seeing your progress of different exercises",
     "PHASE2": "Phase 2: Mindfullness training with different exercises",
     "PHASE3": "Phase 3: Keeping track of calories and macronutrients"
@@ -20,7 +20,7 @@
     "DESC3": ""
   },
   "TABNAMES": {
-    "SOFTWARE-DEVELOPMENT": "software-development",
+    "SOFTWARE-DEVELOPMENT": "Software Development",
     "MUSIC": "Music",
     "EDUCATION": "Education",
     "WORK": "Work",
@@ -56,20 +56,23 @@
   "LANGUAGES": {
     "LANGUAGE": "Languages",
     "DUTCH": "Dutch",
-    "First": "Native Speaker",
+    "FIRST": "Native Speaker",
 
-    "ENGLISH": "ENGLISH",
+    "ENGLISH": "English",
     "SECOND": "Second language"
   },
   "CODINGMUSIC": {
     "FAV": "Favourite Sport, work & relax music"
   },
-  "FindOUTMORE": "Find out more",
+  "FINDOUTMORE": "Find out more",
   "BASICINFO": "Basic information",
   "LOCATION": {
     "DENBOSCH": "Den Bosch, North-Brabant, The Netherlands",
     "Tilburg": "Tilburg, North-Brabant, The Netherlands",
     "MIDDELBURG": "Middelburg, Zealand, The Netherlands",
     "VLISSINGEN": "Flushing, Zealand, The Netherlands"
+  },
+  "CONTACT":{
+    "TITLE": "Contact me"
   }
 }
