@@ -14,7 +14,6 @@ export const environment = {
     measurementId: 'G-T1BF11RVH5',
   },
   production: false,
-  apikey: 'Bearer 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'
 };
 
 /*
