@@ -24,11 +24,19 @@
     "MUSIC": "Music",
     "EDUCATION": "Education",
     "WORK": "Work",
-    "INTERNSHIP": "Internship"
+    "INTERNSHIP": "Internship",
+    "GENERAL": "General"
   },
   "SKILLS": {
     "SOFTWARE": "Software development skills",
-    "MUSIC": "Music production skills"
+    "MUSIC": "Music production skills",
+    "GENERAL": "General"
+  },
+  "SKILLSNAME":{
+    "DL": "Drivers License",
+    "DISCIPLINE": "Disciplined",
+    "ETL": "Eager to learn",
+    "TRUST": "Trustworthy"
   },
   "EXPERIENCE": {
     "EDUCATION": "Education",
@@ -73,6 +81,7 @@
     "VLISSINGEN": "Flushing, Zealand, The Netherlands"
   },
   "CONTACT":{
-    "TITLE": "Contact me"
+    "TITLE": "Contact me",
+    "TEXT": "Send me and email of add me on LinkedIn and i will return a message ASAP"
   }
 }

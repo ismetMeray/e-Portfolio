@@ -11,25 +11,33 @@
     },
     "PROJECT1": {
         "DESC1": "een School project waarbij een app is ontwikkeld om een coach de mogelijkheid te geven om voor een atleet coaching aan te bieden.",
-        "DESC2": "Deze coaching wordt gedaan door middel van annotaties of geluidopnames toe te voegen aan een door de atleet opgestuurde video van de oefening.",
+        "DESC2": "Deze coaching wordt gedaan door annotaties en/of geluidopnames toe te voegen aan een door de atleet opgestuurde video van de oefening.",
         "DESC3": "De alteet volgt ook een traject bijv. Conditie of kracht waarbij nieuwe oefeningen worden vrijgespeeld zodra de coach de laatste oefening heeft goedgekeurd."
     },
     "PROJECT2": {
         "DESC1": "MyDenitity is een product van Epesi B.V. het ondersteunt kappers om hun klanten een betere ervaring te geven, door gebruik te maken van een mobiele app, sensor en eigen tablet of pc kan de kapper vervolgens informatie aflezen over de klant die zojuist het gebouw is binnengekomen",
         "DESC2": "Mijn taak daar als stagiair was om aan de analytische kant van het project te werken, een plek waar de eigenaar grafieken kan observeren die verschillende soorten gegevens bevatten, b.v. totaal aantal klantbezoeken per dag, maand of jaar, wat is de gemiddelde leeftijd van mijn klanten? etc.",
         "DESC3": ""
-      },
+    },
     "TABNAMES": {
         "SOFTWARE-DEVELOPMENT": "software-development",
         "MUSIC": "Muziek",
         "WORK": "Werk",
         "INTERNSHIP": "Stage",
-        "EDUCATION": "Opleidingen"
+        "EDUCATION": "Opleidingen",
+        "GENERAL": "Algemeen"
     },
     "SKILLS": {
         "SOFTWARE": "Software ontwikkeling skills",
-        "MUSIC": "Muziek productie skills"
-      },
+        "MUSIC": "Muziek productie skills",
+        "GENERAL": "Algemeen"
+    },
+    "SKILLSNAME": {
+        "DL": "Auto Rijbewijs",
+        "DISCIPLINE": "Gedisciplineerd",
+        "ETL": "Leergierig",
+        "TRUST": "Betrouwbaar"
+    },
     "EXPERIENCE": {
         "EDUCATION": "Opleidingen",
         "EDLOCATION1": "Avans University of applied sciences",
@@ -39,7 +47,6 @@
         "EDNAME2": "Minor in Filosofie & Ethiek",
         "EDNAME3": "Minor in Systems programming in C++",
         "EDNAME4": "MBO Applicatie ontwikkelaar",
-
         "WORK": "Werk",
         "WONAME1": "Logistiek Werknemer",
         "WONAME2": "Boodschappenbezorgen met bakwagen",
@@ -47,7 +54,6 @@
         "WOLOCATION1": "Make Or Buy Fullfilment",
         "WOLOCATION2": "Jumbo Supermarkten",
         "WOLOCATION3": "Cafe Die Lange",
-
         "INTERNSHIP": "Stage",
         "INTNAME1": "Stagair Software Engineer",
         "INTLOCATION1": "Epesi B.V."
@@ -56,10 +62,9 @@
         "LANGUAGE": "Talen",
         "DUTCH": "Nederlands",
         "FIRST": "Eerste taal",
-    
-        "ENGLISH": "ENGELS",
+        "ENGLISH": "Engels",
         "SECOND": "Tweede taal"
-      },
+    },
     "CODINGMUSIC": {
         "FAV": "Favoriete sport, werk & ontspan muziek"
     },
@@ -70,5 +75,9 @@
         "MIDDELBURG": "Middelburg, Zeeland, Nederland",
         "TILBURG": "Tilburg, Noord-Brabant, Nederland",
         "DENBOSCH": "Den Bosch, Noord-Brabant, Nederland"
-    }
+    },
+    "CONTACT":{
+        "TITLE": "Neem contact op",
+        "TEXT": "Stuur mij gerust een emailtje of voeg mij to op LinkedIn en ik zal z.s.m contact opnemen"
+      }
 }
