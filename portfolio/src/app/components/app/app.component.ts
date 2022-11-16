@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../api.service';
 import { RepositoryFactory } from '../../factory/Repository.factory';
 import { Repository } from 'src/app/repository';
 import { TranslateService } from "@ngx-translate/core";
@@ -8,7 +7,7 @@ import { TranslateService } from "@ngx-translate/core";
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [ApiService]
+  providers: []
 })
 export class AppComponent {
   languageList = [
@@ -27,7 +26,7 @@ export class AppComponent {
   birthdayInYears
   selectedRepos = ["Fitness-App-API", "Fitness-App-IOS", "Project-Everyware-blok11-Groep-B"]
 
-  constructor(private ApiService: ApiService, private translate: TranslateService) {
+  constructor(private translate: TranslateService) {
     this.repositoryFactory = new RepositoryFactory()
     this.birthdayInYears = this.calculateAge(this.birthDay)
     translate.setDefaultLang('nl');
