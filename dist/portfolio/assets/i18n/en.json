@@ -1,0 +1,87 @@
+{
+  "ABOUT": {
+    "LINE1": "About me",
+    "LINE2": "My name is Ismet Meray and I am 22 years young. At the moment I major in Computer Science at Avans university of applied sciences located in Den Bosch, The Netherlands. Currently my interests are in developing mobile apps or web-applications. besides developing software I also enjoy unleashing my creativity by producing or mixing music, designing and poking tattoos and of course spending time with friends and family "
+  },
+  "PROJECT": {
+    "TITLE": "Latest Projects",
+    "PHASE1": "Phase 1(current phase): Keeping track of and seeing your progress of different exercises",
+    "PHASE2": "Phase 2: Mindfullness training with different exercises",
+    "PHASE3": "Phase 3: Keeping track of calories and macronutrients"
+  },
+  "PROJECT1": {
+    "DESC1": "a SchoolProject where an app has been developed to give a coach the opportunity to offer coaching for an athlete.",
+    "DESC2": "This coaching is done by adding annotations or sound recordings to a video of the exercise sent by the athlete.",
+    "DESC3": "The athlete also follows a trajectory e.g. condition or strength where new exercises are unlocked as soon as the coach has approved the last exercise that has been completed by the athlete"
+  },
+  "PROJECT2": {
+    "DESC1": "MyDenitity is a product provided by Epesi B.V. it supports hairdressers giving their customers a better experience, by using a mobile app and sesor which then gives the hairdresser information about the employee that has just entered the building",
+    "DESC2": "My job there as an intern was to work on the analytical side of the project, A place where the owner can observed graphs containing different types of data e.g. total customer visits per day, month or year, male or female? etc.",
+    "DESC3": ""
+  },
+  "TABNAMES": {
+    "SOFTWARE-DEVELOPMENT": "Software Development",
+    "MUSIC": "Music",
+    "EDUCATION": "Education",
+    "WORK": "Work",
+    "INTERNSHIP": "Internship",
+    "GENERAL": "General"
+  },
+  "SKILLS": {
+    "SOFTWARE": "Software development skills",
+    "MUSIC": "Music production skills",
+    "GENERAL": "General"
+  },
+  "SKILLSNAME":{
+    "DL": "Drivers License",
+    "DISCIPLINE": "Disciplined",
+    "ETL": "Eager to learn",
+    "TRUST": "Trustworthy"
+  },
+  "EXPERIENCE": {
+    "EDUCATION": "Education",
+    
+    "EDLOCATION1": "Avans University of applied sciences",
+    "EDLOCATION2": "Fontys University of applied sciences",
+    "EDLOCATION3": "Scalda",
+    "EDNAME1": "Bsc Computer Science",
+    "EDNAME2": "Minor in Philosophy & Ethics",
+    "EDNAME3": "Minor in Systems programming C++",
+    "EDNAME4": "SVE of Computer Science",
+
+    "WORK": "Work",
+    "WONAME1": "Logistics Employee",
+    "WONAME2": "Groceries Deliverer with Boxtruck",
+    "WONAME3": "Catering Employee",
+    "WOLOCATION1": "Make Of Buy Fullfilment Company",
+    "WOLOCATION2": "Jumbo Supermarkten",
+    "WOLOCATION3": "Cafe Die Lange",
+    
+    "INTERNSHIP": "Internship",
+    "INTNAME1": "Intern Software Engineer",
+    "INTLOCATION1": "Epesi B.V."
+  },
+  "LANGUAGES": {
+    "LANGUAGE": "Languages",
+    "DUTCH": "Dutch",
+    "FIRST": "Native Speaker",
+
+    "ENGLISH": "English",
+    "SECOND": "Second language"
+  },
+  "CODINGMUSIC": {
+    "FAV": "Favourite Sport, work & relax music"
+  },
+  "FINDOUTMORE": "Find out more",
+  "BASICINFO": "Basic information",
+  "LOCATION": {
+    "DENBOSCH": "Den Bosch, North-Brabant, The Netherlands",
+    "Tilburg": "Tilburg, North-Brabant, The Netherlands",
+    "MIDDELBURG": "Middelburg, Zealand, The Netherlands",
+    "VLISSINGEN": "Flushing, Zealand, The Netherlands"
+  },
+  "CONTACT":{
+    "TITLE": "Contact me",
+    "TEXT": "Send me and email of add me on LinkedIn and i will return a message ASAP"
+  }
+}
