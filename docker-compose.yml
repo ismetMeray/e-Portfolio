@@ -1,0 +1,39 @@
+version: '3'
+services:
+
+  db:
+    image: 'mongo'
+    container_name: 'portfolio-mongodb'
+    environment:
+      - PORT=27017
+      - HOST=testdb
+    volumes:
+      - ./mongo/data:/data/db
+    ports:
+      - '27017-27019:27017-27019'
+    networks:
+      - backend
+
+  api:
+    image: portfolio-api
+    build: ./API
+    networks:
+      - backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  angular-app:
+    build: ./portfolio # Location of our Dockerfile
+    ports:  
+      - '8080:80' # Port mapping
+    networks:
+      - backend
+    depends_on:
+      - api
+
+
+networks:
+  backend:
+    driver: bridge
