@@ -5,7 +5,9 @@ app.use(express.json())
 require('dotenv').config();
 var user = require("./src/model/user.model");
 
+
 var uri = "mongodb://portfolio-mongodb:27017/portfolio";
+// var uri = "mongodb://127.0.0.1:27017/portfolio";
 mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true });
 
 const connection = mongoose.connection;
@@ -20,5 +22,5 @@ app.use('/api', routes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log("Server running on localhost 4000");
+  console.log("Server running on localhost 3000");
 });

@@ -1,10 +1,10 @@
-FROM node:16.3.0-alpine
+FROM node:lts-alpine3.17
 
 RUN mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY ./ /usr/src/app/
 
 RUN npm install
 
