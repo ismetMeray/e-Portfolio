@@ -3,6 +3,8 @@
 # Use official node image as the base image
 FROM node:lts-alpine3.17 as build
 
+RUN mkdir -p /usr/src/app
+
 # Set the working directory
 WORKDIR /usr/local/app
 
@@ -14,7 +16,6 @@ RUN npm install
 
 # Generate the build of the application
 RUN npm run build
-
 
 # Stage 2: Serve app with nginx server
 
