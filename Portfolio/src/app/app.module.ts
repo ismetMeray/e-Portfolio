@@ -47,7 +47,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     provideDatabase(() => getDatabase())
   ],
   providers: [
-    ScreenTrackingService,UserTrackingService
+    ScreenTrackingService,
+    UserTrackingService
+  ],
+  exports:[
+    TranslateModule
   ],
   bootstrap: [AppComponent]
 })

@@ -1,38 +1,73 @@
 version: '3'
 services:
 
-  db:
-    image: 'mongo'
-    container_name: 'portfolio-mongodb'
-    environment:
-      - PORT=27017
-      - HOST=testdb
-    volumes:
-      - ./mongo/data:/mongo/data
-    ports:
-      - '27017-27019:27017-27019'
-    networks:
-      - backend
-
-  api:
-    image: portfolio-api
-    build: ./API
-    networks:
-      - backend
-    ports:
-      - "3000:3000"
+  app:
+    build: proxy
+    ports: 
+      - 80:80
     depends_on:
-      - db
+      - api
+      - portfolio
+    restart: always
 
-  angular-app:
-    build: ./portfolio # Location of our Dockerfile
-    ports:  
-      - '8080:80' # Port mapping
+  portfolio:
+    build: portfolio # Location of our Dockerfile
+    ports:
+      - 80 # Port mapping
+    volumes:
+      - ./portfolio:/src
     networks:
       - backend
     depends_on:
       - api
-      
+
+  api:
+    image: portfolio-api
+    build: api
+    ports:
+      - 8080
+    volumes:
+      - ./api:/src
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend
+
+  init:
+    build: api
+    environment:
+      - MONGODB_USERNAME=okteto
+      - MONGODB_PASSWORD=mongodb123
+      - MONGODB_DATABASE=okteto
+      - MONGODB_HOST=mongodb
+    command: yarn load
+    restart: never
+    depends_on:
+      db:
+        condition: service_healthy 
+
+  db:
+    image: docker.io/bitnami/mongodb:4.0.12-debian-9-r43
+    environment:
+      - MONGODB_USERNAME=okteto
+      - MONGODB_PASSWORD=mongodb123
+      - MONGODB_DATABASE=okteto
+      - MONGODB_ROOT_PASSWORD=mongodb123root
+      - MONGODB_SYSTEM_LOG_VERBOSITY=0
+      - MONGODB_DISABLE_SYSTEM_LOG=no
+      - MONGODB_ENABLE_IPV6=no
+      - MONGODB_ENABLE_DIRECTORY_PER_DB=no
+    ports:
+      - 27017
+    volumes:
+      - data:/bitnami/mongodb
+    networks:
+      - backend
+
+volumes:
+  data:
+
 networks:
   backend:
     driver: bridge
