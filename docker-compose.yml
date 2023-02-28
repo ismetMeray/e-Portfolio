@@ -1,67 +1,52 @@
-version: '3'
+version: '3.8'
 services:
 
-  app:
-    build: proxy
-    ports: 
-      - 80:80
-    depends_on:
-      - api
-      - portfolio
-    restart: always
+  # app:
+  #   build: proxy
+  #   ports: 
+  #     - 80:80
+  #   depends_on:
+  #     - api
+  #   restart: always
 
-  portfolio:
-    build: portfolio # Location of our Dockerfile
-    ports:
-      - 80 # Port mapping
-    volumes:
-      - ./portfolio:/src
-    networks:
-      - backend
-    depends_on:
-      - api
+  # portfolio:
+  #   build: portfolio # Location of our Dockerfile
+  #   ports:
+  #     - 80 # Port mapping
+  #   volumes:
+  #     - ./portfolio:/src
+  #   networks:
+  #     - backend
+  #   depends_on:
+  #     - api
 
   api:
     image: portfolio-api
     build: api
     ports:
-      - 8080
+      - 3000:3000
     volumes:
-      - ./api:/src
+      - /usr/src/app
     depends_on:
-      db:
-        condition: service_healthy
+      - db
     networks:
       - backend
-
-  init:
-    build: api
-    environment:
-      - MONGODB_USERNAME=okteto
-      - MONGODB_PASSWORD=mongodb123
-      - MONGODB_DATABASE=okteto
-      - MONGODB_HOST=mongodb
-    command: yarn load
-    restart: never
-    depends_on:
-      db:
-        condition: service_healthy 
-
   db:
-    image: docker.io/bitnami/mongodb:4.0.12-debian-9-r43
-    environment:
-      - MONGODB_USERNAME=okteto
-      - MONGODB_PASSWORD=mongodb123
-      - MONGODB_DATABASE=okteto
-      - MONGODB_ROOT_PASSWORD=mongodb123root
-      - MONGODB_SYSTEM_LOG_VERBOSITY=0
-      - MONGODB_DISABLE_SYSTEM_LOG=no
-      - MONGODB_ENABLE_IPV6=no
-      - MONGODB_ENABLE_DIRECTORY_PER_DB=no
+    image: 'mongo'
+    # environment:
+    #   - MONGODB_USERNAME=okteto
+    #   - MONGODB_PASSWORD=mongodb123
+    #   - MONGODB_DATABASE=okteto
+    #   - MONGODB_ROOT_PASSWORD=mongodb123root
+    #   - MONGODB_SYSTEM_LOG_VERBOSITY=0
+    #   - MONGODB_DISABLE_SYSTEM_LOG=no
+    #   - MONGODB_ENABLE_IPV6=no
+    #   - MONGODB_ENABLE_DIRECTORY_PER_DB=no
     ports:
-      - 27017
+      - 27018:27017
     volumes:
       - data:/bitnami/mongodb
+    restart: always
     networks:
       - backend
 

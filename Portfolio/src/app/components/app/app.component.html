@@ -5,12 +5,11 @@
         <div class="navbar-collapse collapse" id="collapseNavbar">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    {{'LANGUAGES.LANGUAGE'| translate}}
                 </li>
                 <ng-container *ngFor="let language of languageList">
                     <li class="nav-item">
                         <a (click)="changeLang(language.code)">
-                            <a class="button p-3">{{language.label}} </a>
+                            <a class="button p-3"> </a>
                         </a>
                     </li>
                 </ng-container>
@@ -79,10 +78,9 @@
         <div class="primary col-lg-8 col-12">
             <section class="about section">
                 <div class="section-inner shadow-sm rounded">
-                    <h2 class="heading">{{'ABOUT.LINE1' | translate}}</h2>
+                    <h2 class="heading"></h2>
                     <div class="content">
                         <p>
-                            {{'ABOUT.LINE2' | translate}}
                         </p>
                     </div>
                 </div>
@@ -123,30 +121,30 @@
                                                 <div class="col-md-4">
                                                     <a target="_blank">
                                                         <img class="img-fluid project-image rounded shadow-sm"
-                                                            src='{{ "../assets/images/" + repo.name + ".jpeg" }}'
+                                                            src=' "../assets/images/" + repo.name + ".jpeg" '
                                                             alt="project name">
                                                     </a>
                                                 </div>
                                                 <div class="col">
-                                                    <h3 class="title">{{repo.name | translate}}</h3>
+                                                    <h3 class="title"></h3>
 
                                                     <ul class="list-unstyled">
-                                                        <li class="list-group-item">{{'PROJECT.PHASE1' | translate}}
+                                                        <li class="list-group-item">
                                                         </li>
-                                                        <li class="list-group-item">{{'PROJECT.PHASE2' | translate}}
+                                                        <li class="list-group-item">
                                                         </li>
-                                                        <li class="list-group-item">{{'PROJECT.PHASE3' | translate}}
+                                                        <li class="list-group-item">
                                                         </li>
                                                     </ul>
-                                                    <p><a class="more-link" href="{{repo.html_url}}"><i
+                                                    <p><a class="more-link" href="repo.html_url"><i
                                                                 class="fas fa-external-link-alt"></i>
-                                                            {{'FINDOUTMORE' | translate}}</a></p>
+                                                            </a></p>
                                                 </div>
                                                 <div class="col">
                                                     <h2>TechStack</h2>
                                                     <ul class="list-group">
                                                         <div *ngFor="let tech of repo.techStack">
-                                                            <li class="list-group-item">{{tech}}</li>
+                                                            <li class="list-group-item"></li>
                                                         </div>
                                                     </ul>
                                                 </div>
@@ -165,30 +163,30 @@
                                         <div class="col-md-4">
                                             <a target="_blank">
                                                 <img class="img-fluid project-image rounded shadow-sm"
-                                                    src='{{ "../assets/images/" + repo.name + ".jpeg" }}'
+                                                    src=' "../assets/images/" + repo.name + ".jpeg" '
                                                     alt="project name">
                                             </a>
                                         </div>
                                         <div class="col">
-                                            <h3 class="title">{{repo.name | translate}}</h3>
+                                            <h3 class="title"></h3>
 
                                             <ul class="list-unstyled">
-                                                <li class="list-group-item">{{'PROJECT' + i + '.DESC1' | translate}}
+                                                <li class="list-group-item">
                                                 </li>
-                                                <li class="list-group-item"> {{'PROJECT' + i + '.DESC2' | translate}}
+                                                <li class="list-group-item">
                                                 </li>
-                                                <li class="list-group-item"> {{'PROJECT' + i + '.DESC3' | translate}}
+                                                <li class="list-group-item">
                                                 </li>
                                             </ul>
-                                            <p><a class="more-link" href="{{repo.html_url}}"><i
+                                            <p><a class="more-link" href="repo.html_url"><i
                                                         class="fas fa-external-link-alt"></i>
-                                                    {{'FINDOUTMORE' | translate}}</a></p>
+                                                    </a></p>
                                         </div>
                                         <div class="col">
                                             <h2>TechStack</h2>
                                             <ul class="list-group">
                                                 <div *ngFor="let tech of repo.techStack">
-                                                    <li class="list-group-item">{{tech}}</li>
+                                                    <li class="list-group-item"></li>
                                                 </div>
                                             </ul>
                                         </div>
@@ -208,14 +206,14 @@
         <div class="secondary col-lg-4 col-12">
             <aside class="info aside section">
                 <div class="section-inner shadow-sm rounded">
-                    <h2 class="heading">{{'BASICINFO' | translate}}</h2>
+                    <h2 class="heading"></h2>
                     <div class="content">
                         <ul class="list-unstyled">
                             <li><i class="fas fa-map-marker-alt"></i><span
-                                    class="sr-only">Location:</span>{{'LOCATION.DENBOSCH' | translate}}</li>
+                                    class="sr-only">Location:</span></li>
                             <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a
                                     href="#">ismet-meray@hotmail.com</a></li>
-                            <li><i class="fas fa-birthday-cake"></i><span>{{birthdayInYears}}</span><a> jaar jong</a>
+                            <li><i class="fas fa-birthday-cake"></i><span></span><a> jaar jong</a>
 
                             </li>
                         </ul>
@@ -232,17 +230,17 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link border-0 active" id="software-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-software" type="button" role="tab" aria-controls="nav-software-tab"
-                            aria-selected="true">{{'TABNAMES.SOFTWARE-DEVELOPMENT' | translate}}</button>
+                            aria-selected="true"></button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link border-0" id="music-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-music" type="button" role="tab" aria-controls="nav-music-tab"
-                            aria-selected="false">{{'TABNAMES.MUSIC' | translate}}</button>
+                            aria-selected="false"></button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link border-0" id="general-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-general" type="button" role="tab" aria-controls="nav-general-tab"
-                            aria-selected="false">{{'TABNAMES.GENERAL' | translate}}</button>
+                            aria-selected="false"></button>
                     </li>
                 </ul>
 
@@ -250,7 +248,7 @@
                     <div class="tab-pane fade show active" id="nav-software" role="tabpanel"
                         aria-labelledby="nav-software-tab">
                         <div class="section-inner shadow-sm rounded">
-                            <h2 class="heading">{{'SKILLS.SOFTWARE' | translate}}</h2>
+                            <h2 class="heading">'SKILLS.SOFTWARE' | translate</h2>
                             <div class="content">
                                 <div class="skillset">
                                     <div class="item mb-0">
@@ -287,7 +285,7 @@
 
                     <div class="tab-pane fade" id="nav-music" role="tabpanel" aria-labelledby="nav-music-tab">
                         <div class="section-inner shadow-sm rounded">
-                            <h2 class="heading">{{'SKILLS.MUSIC' | translate}}</h2>
+                            <h2 class="heading">'SKILLS.MUSIC' | translate</h2>
                             <div class="content">
                                 <p class="intro">
                                 </p>
@@ -316,26 +314,26 @@
 
                     <div class="tab-pane fade" id="nav-general" role="tabpanel" aria-labelledby="nav-general-tab">
                         <div class="section-inner shadow-sm rounded">
-                            <h2 class="heading">{{'SKILLS.GENERAL' | translate}}</h2>
+                            <h2 class="heading">'SKILLS.GENERAL' | translate</h2>
                             <div class="content">
                                 <p class="intro">
                                 </p>
 
                                 <div class="skillset">
                                     <div class="item mb-0">
-                                        <h3 class="level-title">{{'SKILLSNAME.DL' | translate}}</h3>
+                                        <h3 class="level-title">'SKILLSNAME.DL' | translate</h3>
                                     </div>
 
                                     <div class="item mb-0">
-                                        <h3 class="level-title">{{'SKILLSNAME.TRUST' | translate}}</h3>
+                                        <h3 class="level-title">'SKILLSNAME.TRUST' | translate</h3>
                                     </div>
 
                                     <div class="item mb-0">
-                                        <h3 class="level-title">{{'SKILLSNAME.DISCIPLINE' | translate}}</h3>
+                                        <h3 class="level-title">'SKILLSNAME.DISCIPLINE' | translate</h3>
                                     </div>
 
                                     <div class="item mb-0">
-                                        <h3 class="level-title">{{'SKILLSNAME.ETL' | translate}}</h3>
+                                        <h3 class="level-title">'SKILLSNAME.ETL' | translate</h3>
                                     </div>
                                 </div>
                             </div>
@@ -350,116 +348,116 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link border-0 active" id="edu-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-edu" type="button" role="tab" aria-controls="nav-edu"
-                            aria-selected="true">{{'TABNAMES.EDUCATION' |
-                            translate}}</button>
+                            aria-selected="true">'TABNAMES.EDUCATION' |
+                            translate</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link border-0" id="work-tab" data-bs-toggle="tab" data-bs-target="#nav-work"
-                            type="button" role="tab" aria-controls="nav-work" aria-selected="false">{{'TABNAMES.WORK' |
-                            translate}}</button>
+                            type="button" role="tab" aria-controls="nav-work" aria-selected="false">'TABNAMES.WORK' |
+                            translate</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link border-0" id="intern-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-intern" type="button" role="tab" aria-controls="nav-intern"
-                            aria-selected="false">{{'TABNAMES.INTERNSHIP' | translate}}</button>
+                            aria-selected="false">'TABNAMES.INTERNSHIP' | translate</button>
                     </li>
                 </ul>
 
                 <div class="tab-content" id="nav-edu-work-content">
                     <div class="tab-pane fade show active" id="nav-edu" role="tabpanel" aria-labelledby="nav-edu-tab">
                         <div class="section-inner shadow-sm rounded">
-                            <h2 class="heading">{{'EXPERIENCE.EDUCATION' | translate}}</h2>
+                            <h2 class="heading">'EXPERIENCE.EDUCATION' | translate</h2>
                             <div class="content">
                                 <div class="item">
-                                    <h3 class="title mb-0"><i class="fas fa-graduation-cap"></i> {{'EXPERIENCE.EDNAME1'
+                                    <h3 class="title mb-0"><i class="fas fa-graduation-cap"></i> 'EXPERIENCE.EDNAME1'
                                         |
-                                        translate}}</h3>
-                                    <h4 class="university mb-0">{{'EXPERIENCE.EDLOCATION1' | translate}} <br> <span
+                                        translate</h3>
+                                    <h4 class="university mb-0">'EXPERIENCE.EDLOCATION1' | translate <br> <span
                                             class="year">2019-2023</span></h4>
-                                    <h5 class="university mb-0"><span class="year"></span>{{'LOCATION.DENBOSCH' |
-                                        translate}}</h5>
+                                    <h5 class="university mb-0"><span class="year"></span>'LOCATION.DENBOSCH' |
+                                        translate</h5>
                                 </div>
 
                                 <div class="item">
-                                    <h3 class="title mb-0"><i class="fas fa-graduation-cap"></i> {{'EXPERIENCE.EDNAME2'
+                                    <h3 class="title mb-0"><i class="fas fa-graduation-cap"></i> 'EXPERIENCE.EDNAME2'
                                         |
-                                        translate}}</h3>
-                                    <h4 class="university mb-0">{{'EXPERIENCE.EDLOCATION2' | translate}}<br> <span
+                                        translate</h3>
+                                    <h4 class="university mb-0">'EXPERIENCE.EDLOCATION2' | translate<br> <span
                                             class="year">februari 2022 - july 2022</span></h4>
-                                    <h5 class="university mb-0"><span class="year"></span>{{'LOCATION.TILBURG' |
-                                        translate}}</h5>
+                                    <h5 class="university mb-0"><span class="year"></span>'LOCATION.TILBURG' |
+                                        translate</h5>
                                 </div>
                                 <div class="item">
-                                    <h3 class="title mb-0"><i class="fas fa-graduation-cap"></i> {{'EXPERIENCE.EDNAME3'
+                                    <h3 class="title mb-0"><i class="fas fa-graduation-cap"></i> 'EXPERIENCE.EDNAME3'
                                         |
-                                        translate}}</h3>
-                                    <h4 class="university mb-0"> {{'EXPERIENCE.EDLOCATION1' | translate}}<br> <span
+                                        translate</h3>
+                                    <h4 class="university mb-0"> 'EXPERIENCE.EDLOCATION1' | translate<br> <span
                                             class="year">september 2021 - november 2021</span></h4>
-                                    <h5 class="university mb-0"><span class="year"></span>{{'LOCATION.DENBOSCH' |
-                                        translate}}</h5>
+                                    <h5 class="university mb-0"><span class="year"></span>'LOCATION.DENBOSCH' |
+                                        translate</h5>
                                 </div>
 
                                 <div class="item">
-                                    <h3 class="title mb-0"><i class="fas fa-graduation-cap"></i> {{'EXPERIENCE.EDNAME4'
+                                    <h3 class="title mb-0"><i class="fas fa-graduation-cap"></i> 'EXPERIENCE.EDNAME4'
                                         |
-                                        translate}}</h3>
-                                    <h4 class="university mb-0"> {{'EXPERIENCE.EDLOCATION3' | translate}} <br><span
+                                        translate</h3>
+                                    <h4 class="university mb-0"> 'EXPERIENCE.EDLOCATION3' | translate <br><span
                                             class="year">2016-2019</span></h4>
-                                    <h5 class="university mb-0"><span class="year"></span>{{'LOCATION.VLISSINGEN' |
-                                        translate}}</h5>
+                                    <h5 class="university mb-0"><span class="year"></span>'LOCATION.VLISSINGEN' |
+                                        translate</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade show" id="nav-work" role="tabpanel" aria-labelledby="nav-work-tab">
                         <div class="section-inner shadow-sm rounded">
-                            <h2 class="heading">{{'EXPERIENCE.WORK' | translate}}</h2>
+                            <h2 class="heading">'EXPERIENCE.WORK' | translate</h2>
                             <div class="content" style="font-size: 2rem;">
                                 <div class="item">
                                     <h3 class="title mb-0"><i class="fa-solid fa-warehouse fa-fw"></i>
-                                        {{'EXPERIENCE.WONAME1' | translate}}</h3>
-                                    <h4 class="university mb-0">{{'EXPERIENCE.WONAME1' | translate}} <br><span
+                                        'EXPERIENCE.WONAME1' | translate</h3>
+                                    <h4 class="university mb-0">'EXPERIENCE.WONAME1' | translate <br><span
                                             class="year">september 2022 - oktober 2022</span></h4>
-                                    <h5 class="university mb-0"><span class="year"></span>{{'LOCATION.DENBOSCH' |
-                                        translate}}</h5>
+                                    <h5 class="university mb-0"><span class="year"></span>'LOCATION.DENBOSCH' |
+                                        translate</h5>
 
                                 </div>
 
                                 <div class="item">
                                     <h3 class="title mb-0"><i class="fa-solid fa-truck fa-fw"></i>
-                                        {{'EXPERIENCE.WONAME2'
-                                        | translate}}</h3>
-                                    <h4 class="university mb-0"> {{'EXPERIENCE.WONAME2' | translate}} <br> <span
+                                        'EXPERIENCE.WONAME2'
+                                        | translate</h3>
+                                    <h4 class="university mb-0"> 'EXPERIENCE.WONAME2' | translate <br> <span
                                             class="year">december
                                             2021 - februari 2022</span></h4>
-                                    <h5 class="university mb-0"><span class="year"></span>{{'LOCATION.DENBOSCH' |
-                                        translate}}</h5>
+                                    <h5 class="university mb-0"><span class="year"></span>'LOCATION.DENBOSCH' |
+                                        translate</h5>
 
                                 </div>
 
                                 <div class="item">
                                     <h3 class="title mb-0"><i class="fa-solid fa-wine-glass fa-fw"></i>
-                                        {{'EXPERIENCE.WONAME3' | translate}}</h3>
-                                    <h4 class="university mb-0"> {{'EXPERIENCE.WONAME3' | translate}} <br> <span
+                                        'EXPERIENCE.WONAME3' | translate</h3>
+                                    <h4 class="university mb-0"> 'EXPERIENCE.WONAME3' | translate <br> <span
                                             class="year">april 2021 -
                                             augustus 2021</span></h4>
-                                    <h5 class="university mb-0"><span class="year"></span>{{'LOCATION.MIDDELBURG' |
-                                        translate}}</h5>
+                                    <h5 class="university mb-0"><span class="year"></span>'LOCATION.MIDDELBURG' |
+                                        translate</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade show" id="nav-intern" role="tabpanel" aria-labelledby="nav-intern-tab">
                         <div class="section-inner shadow-sm rounded">
-                            <h2 class="heading">{{'EXPERIENCE.INTNAME1' | translate}}</h2>
+                            <h2 class="heading">'EXPERIENCE.INTNAME1' | translate</h2>
                             <div class="content" style="font-size: 2rem;">
                                 <div class="item">
                                     <h3 class="title mb-0"><i class="fa-solid fa-warehouse fa-fw"></i>
-                                        {{'EXPERIENCE.INTNAME1' | translate}}</h3>
-                                    <h4 class="university mb-0">{{'EXPERIENCE.INTLOCATION1' | translate}}<br><span
+                                        'EXPERIENCE.INTNAME1' | translate</h3>
+                                    <h4 class="university mb-0">'EXPERIENCE.INTLOCATION1' | translate<br><span
                                             class="year">september 2018 - februari 2019</span></h4>
-                                    <h5 class="university mb-0"><span class="year"></span>{{'LOCATION.MIDDELBURG' |
-                                        translate}}</h5>
+                                    <h5 class="university mb-0"><span class="year"></span>'LOCATION.MIDDELBURG' |
+                                        translate</h5>
 
                                 </div>
                             </div>
@@ -470,12 +468,12 @@
 
             <aside class="languages aside section">
                 <div class="section-inner shadow-sm rounded">
-                    <h2 class="heading">{{'LANGUAGES.LANGUAGE'| translate}}</h2>
+                    <h2 class="heading">'LANGUAGES.LANGUAGE'| translate</h2>
                     <div class="content">
                         <ul class="list-unstyled">
                             <li class="item">
-                                <span class="title"><strong>{{'LANGUAGES.DUTCH' | translate}} :</strong></span>
-                                <span class="level"> {{'LANGUAGES.FIRST' | translate}} <br class="visible-xs">
+                                <span class="title"><strong>'LANGUAGES.DUTCH' | translate :</strong></span>
+                                <span class="level"> 'LANGUAGES.FIRST' | translate <br class="visible-xs">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -485,8 +483,8 @@
                             </li>
                             <!--//item-->
                             <li class="item">
-                                <span class="title"><strong>{{'LANGUAGES.ENGLISH' | translate}}:</strong></span>
-                                <span class="level"> {{'LANGUAGES.SECOND' | translate}} <br class="visible-xs">
+                                <span class="title"><strong>'LANGUAGES.ENGLISH' | translate:</strong></span>
+                                <span class="level"> 'LANGUAGES.SECOND' | translate <br class="visible-xs">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -501,7 +499,7 @@
 
             <aside class="list music aside section">
                 <div class="section-inner shadow-sm rounded">
-                    <h2 class="heading">{{'CODINGMUSIC.FAV' | translate}}</h2>
+                    <h2 class="heading">'CODINGMUSIC.FAV' | translate</h2>
                     <div class="content">
                         <ul class="list-unstyled">
                             <li>

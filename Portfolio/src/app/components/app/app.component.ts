@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RepositoryFactory } from '../../factory/Repository.factory';
 import { Repository } from 'src/app/repository';
-import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -25,11 +24,11 @@ export class AppComponent {
   birthDay = "1999-12-29"
   birthdayInYears
   selectedRepos = ["Fitness-App-API", "Fitness-App-IOS", "Project-Everyware-blok11-Groep-B"]
-
-  constructor(private translate: TranslateService) {
+//private translate: TranslateService
+  constructor() {
     this.repositoryFactory = new RepositoryFactory()
     this.birthdayInYears = this.calculateAge(this.birthDay)
-    translate.setDefaultLang('nl');
+    // translate.setDefaultLang('nl');
 
   }
   ngOnInit() {
@@ -37,7 +36,7 @@ export class AppComponent {
   }
 
   changeLang(lang: string) {
-    this.translate.use(lang);
+    // this.translate.use(lang);
   }
 
   getRepositories() {

@@ -33,14 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatIconModule,
     MatGridListModule,
     MatCardModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      },
-      defaultLanguage: 'nl',
-    }),
+    // TranslateModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
@@ -51,8 +44,17 @@ export function HttpLoaderFactory(http: HttpClient) {
     UserTrackingService
   ],
   exports:[
-    TranslateModule
+    // TranslateModule
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+//.forRoot({
+//   loader: {
+//     provide: TranslateLoader,
+//     useFactory: HttpLoaderFactory,
+//     deps: [HttpClient]
+//   },
+//   defaultLanguage: 'nl',
+// }),

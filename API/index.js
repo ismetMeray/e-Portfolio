@@ -5,10 +5,10 @@ app.use(express.json())
 require('dotenv').config();
 var user = require("./src/model/user.model");
 
-
+var uri2 = 'mongodb://db:27017/portfolio'
 var uri = "mongodb://portfolio-mongodb:27017/portfolio";
 // var uri = "mongodb://127.0.0.1:27017/portfolio";
-mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(uri2, { useUnifiedTopology: true, useNewUrlParser: true });
 
 const connection = mongoose.connection;
 

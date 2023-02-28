@@ -1,14 +1,12 @@
-FROM node:lts-alpine3.17
+FROM node:latest as build
 
 
-WORKDIR /src
+WORKDIR /usr/src/app
 
-COPY package.json ./
+COPY package*.json ./
 RUN npm install
-
-
 COPY . .
 
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["npm", "run", "serve"]
