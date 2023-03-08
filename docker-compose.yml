@@ -23,7 +23,7 @@ services:
 
   api:
     image: portfolio-api
-    build: ./api
+    build: ./API
     ports:
       - 3000:3000
     volumes:
