@@ -12,17 +12,18 @@ services:
   # portfolio:
   #   build: portfolio # Location of our Dockerfile
   #   ports:
-  #     - 80 # Port mapping
+  #     - 4200:4200 # Port mapping
   #   volumes:
-  #     - ./portfolio:/src
+  #     - /usr/local/app
   #   networks:
   #     - backend
   #   depends_on:
   #     - api
+  #   restart: always
 
   api:
     image: portfolio-api
-    build: api
+    build: ./api
     ports:
       - 3000:3000
     volumes:
@@ -31,6 +32,8 @@ services:
       - db
     networks:
       - backend
+    restart: always
+
   db:
     image: 'mongo'
     # environment:
@@ -43,7 +46,7 @@ services:
     #   - MONGODB_ENABLE_IPV6=no
     #   - MONGODB_ENABLE_DIRECTORY_PER_DB=no
     ports:
-      - 27018:27017
+      - 27017:27017
     volumes:
       - data:/bitnami/mongodb
     restart: always
