@@ -1,0 +1,136 @@
+.main-image {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding-top: 4vw;
+  }
+  
+  .intro-section {
+    background-image: url("../assets/images/abstract-banner.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  
+  .nested-enter-active {
+    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+    left: 0;
+  }
+  
+  .nested-leave-active {
+    transition: all 0.5s ease-in;
+  }
+  
+  /* delay leave of parent element */
+  .nested-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+  
+  .nested-enter-from,
+  .nested-leave-to {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  
+  .fade-in-down {
+    animation: fade-in-down 2s ease;
+  }
+  
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    animation: fade-in-up 2s ease;
+  }
+  
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .bounce-in-right {
+    animation: bounce-in-right 2s ease;
+  }
+  
+  @keyframes bounce-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(2000px);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translateX(-30px);
+    }
+  
+    80% {
+      transform: translateX(10px);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .bounce-in-left {
+    animation: bounce-in-left 2s ease;
+  }
+  
+  @keyframes bounce-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-2000px);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translateX(30px);
+    }
+  
+    80% {
+      transform: translateX(10px);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* .card {
+    perspective: 800px;
+  } */
+  
+  .card__content {
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .card__content {
+    transform: rotateY(.5turn);
+  }
+  
+  .card__front,
+  .card__back {
+    backface-visibility: hidden;
+  }
+  
+  .card__back {
+    transform: rotateY(.5turn);
+  }
